@@ -2,11 +2,12 @@
 //  main.swift
 //  Calc
 //
-//  Created by Brian Ross on 10/4/16.
+//  Created by Chris Ross on 10/4/16.
 //  Copyright © 2016 Chris Ross. All rights reserved.
 //
 
 import Foundation
+
 
 print("Enter all the numbers that you wish to operate on and then the operand at the end \n options: + - / * % sum avg count fact")
 
