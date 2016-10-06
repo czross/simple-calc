@@ -43,7 +43,7 @@ if (response == nil || response.isEmpty) {
             count += 1
         }
         answer = answer / Double.init(count)
-    } else if (allArray[arrayLength - 1] == "count" ) {
+    } else if (allArray[arrayLength - 1] == "count") {
         var count = 0
         for i in 0...(arrayLength - 2) {
             var num = Double.init(allArray[i])
@@ -51,6 +51,13 @@ if (response == nil || response.isEmpty) {
             count += 1
         }
         answer = Double.init(count)
+    } else if (allArray[arrayLength - 1] == "fact") {
+        var length = Double.init(allArray[0])
+        var count: Double  = 0
+        while (count < length!) {
+            count += 1
+            answer += count
+        }
     }
     print("Results:  \(answer)")
 }
