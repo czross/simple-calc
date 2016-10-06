@@ -8,7 +8,7 @@
 
 import Foundation
 
-print("Enter all the numbers that you wish to operate on and then the operand at the end")
+print("Enter all the numbers that you wish to operate on and then the operand at the end \n options: + - / * % sum avg count fact")
 
 let response = readLine(strippingNewline: true)!
 
@@ -34,14 +34,24 @@ if (response == nil || response.isEmpty) {
     } else if (allArray[arrayLength - 1] == "*" ) {
         answer += (Double.init(allArray[0])! * Double.init(allArray[1])!)
     } else if (allArray[arrayLength - 1] == "%" ) {
-        answer += (Double.init(allArray[0])! % Double.init(allArray[1])!)
+        answer += Double.init(allArray[0])!.truncatingRemainder(dividingBy: Double.init(allArray[1])!)
     } else if (allArray[arrayLength - 1] == "avg" ) {
+        var count = 0
         for i in 0...(arrayLength - 2) {
             var num = Double.init(allArray[i])
             answer += num!
-            answer = answer / Double.init(arrayLength - 2)
+            count += 1
         }
+        answer = answer / Double.init(count)
+    } else if (allArray[arrayLength - 1] == "count" ) {
+        var count = 0
+        for i in 0...(arrayLength - 2) {
+            var num = Double.init(allArray[i])
+            answer += num!
+            count += 1
+        }
+        answer = Double.init(count)
     }
-    print(answer)
+    print("Results:  \(answer)")
 }
 
